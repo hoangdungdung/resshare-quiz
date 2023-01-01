@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.9.2.201712210913-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[false]]></enableImports>
+	<configs>
+		<config>java:com.resshare.quiz.ResshareQuizApp</config>
+	</configs>
+	<autoconfigs>
+		<config>java:com.resshare.quiz.LocalConfig</config>
+		<config>java:com.resshare.quiz.AwsConfig</config>
+		<config>java:com.resshare.book.ServiceListenerBookStart</config>
+		<config>java:com.resshare.quiz.RedisConfig</config>
+	</autoconfigs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>
