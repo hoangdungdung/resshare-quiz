@@ -156,7 +156,7 @@
                     <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-               <mainClass>com.resshare.springboot.ResshareBookApp</mainClass>
+               <mainClass>com.resshare.quiz.ResshareQuizApp</mainClass>
             </manifest>
           </archive> 
         </configuration>
