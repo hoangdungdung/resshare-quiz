@@ -1,4 +1,22 @@
-	<dependency>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+ <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.4</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+
+
+
+  <groupId>resshare.quiz</groupId>
+  <artifactId>resshare-quiz</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>resshare.quiz</name>
+  <dependencies>
+
+  	<dependency>
 		<groupId>resshare.core</groupId>
 		<artifactId>resshare-core</artifactId>
 		<version>1.0</version>
@@ -14,29 +32,21 @@
 		<systemPath>${project.basedir}/libs/resshare-common.jar</systemPath>
 	</dependency>
 
+    <dependency>
+        <groupId>javax.mail</groupId>
+        <artifactId>mail</artifactId>
+        <version>1.4.5</version>
+    </dependency>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>resshare.quiz</groupId>
-  <artifactId>resshare-quiz</artifactId>
-  <version>1.0</version>
-  <dependencies>
-  
-   <dependency>
-		<groupId>resshare.common</groupId>
-		<artifactId>resshare-common</artifactId>
-		<version>1.0</version>
-		<scope>system</scope>
-		<systemPath>${project.basedir}/libs/resshare-common.jar</systemPath>
-	</dependency>
-			<dependency>
-		<groupId>resshare.core</groupId>
-		<artifactId>resshare-core</artifactId>
-		<version>1.0</version>
-		<scope>system</scope>
-		<systemPath>${project.basedir}/libs/resshare-core.jar</systemPath>
-	</dependency>
- 
+    <dependency>
+        <groupId>javax.activation</groupId>
+        <artifactId>activation</artifactId>
+        <version>1.1.1</version>
+    </dependency>
+
+
+
+
 
  <dependency>
       <groupId>com.google.firebase</groupId>
@@ -48,15 +58,15 @@
       <artifactId>httpmime</artifactId>
       <version>4.5.2</version>
     </dependency>
- 
+
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
       <version>1.5.4.RELEASE</version>
     </dependency>
- 
- 
-   
+
+
+
     <dependency>
       <groupId>com.squareup.okhttp</groupId>
       <artifactId>okhttp</artifactId>
@@ -82,7 +92,7 @@
       <artifactId>pusher-http-java</artifactId>
       <version>1.0.0</version>
     </dependency>
- 
+
 
     <dependency>
       <groupId>org.openjdk.jol</groupId>
@@ -129,7 +139,7 @@
       <artifactId>httpclient</artifactId>
       <version>4.5.13</version>
     </dependency>
-    
+
 
   </dependencies>
   <build>
@@ -148,6 +158,19 @@
       </resource>
     </resources>
     <plugins>
+    <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+                <executable>true</executable>
+            </configuration>
+        </plugin><plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+                <executable>true</executable>
+            </configuration>
+        </plugin>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.7.0</version>
@@ -157,7 +180,7 @@
                     <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-               <mainClass>com.resshare.springboot.ResshareBookApp</mainClass>
+               <mainClass>com.resshare.quiz.ResshareQuizApp</mainClass>
             </manifest>
           </archive> 
         </configuration>
