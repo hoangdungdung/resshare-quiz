@@ -14,9 +14,6 @@ import java.net.URI;
 																// combined
 public class ResshareCoreApp {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ResshareCoreApp.class, args);
-	}
 
 	public static String DATABASE_URL = "https://quattet-11188.firebaseio.com/";
 	public static final Logger log = LoggerFactory.getLogger(ResshareCoreApp.class);

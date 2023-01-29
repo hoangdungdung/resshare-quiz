@@ -41,10 +41,6 @@ import com.resshare.framework.model.Output;
 // combined
 public class StartServiceListenerCore {
 
-	public static void main(String[] args) {
-		SpringApplication.run(StartServiceListenerCore.class, args);
-	}
-
 	public static String DATABASE_URL = "https://quattet-11188.firebaseio.com/";
 	public static String GATEWAY_URI;
 	public static String http = "http";
