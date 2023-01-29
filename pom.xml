@@ -15,21 +15,7 @@
     <description>Resshare-quiz project </description>
 
     <dependencies>
-        <dependency>
-            <groupId>resshare.core</groupId>
-            <artifactId>resshare-core</artifactId>
-            <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/libs/resshare-core.jar</systemPath>
-        </dependency>
 
-        <dependency>
-            <groupId>resshare.common</groupId>
-            <artifactId>resshare-common</artifactId>
-            <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/libs/resshare-common.jar</systemPath>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
