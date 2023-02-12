@@ -62,6 +62,7 @@ public class StartServiceListenerCore {
 	public static String REST_SERVICE_URI = "http://localhost:8080/api";
 	public static String RESSHARE_REST_SERVICE_URI = "http://localhost:8088/api";
 	public static String APPLICATION_NAME = "quattet";
+	public static String INSTALL_NAME = "INSTALL_NAME";
 	public static String ENV = "DEV";
 	public static String CLUSTER = "";
 	public static String INPUT = "input_data";

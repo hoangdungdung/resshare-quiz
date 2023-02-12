@@ -10,7 +10,7 @@ public class ResFirebaseReference {
 
 		if (path_load_form_script.startsWith("../")) {
 			String path_root = StartServiceListenerCore.APPLICATION_NAME + "/" + StartServiceListenerCore.INPUT
-					+ StartServiceListenerCore.CLUSTER;
+					+ StartServiceListenerCore.CLUSTER+ StartServiceListenerCore.INSTALL_NAME ;
 			String path_load_form_script_full = path_load_form_script.replaceFirst("..", path_root);
 			return FirebaseDatabase.getInstance().getReference(path_load_form_script_full);
 
@@ -23,7 +23,7 @@ public class ResFirebaseReference {
 
 		if (path_load_form_script.startsWith("../")) {
 			String path_root = StartServiceListenerCore.APPLICATION_NAME + "/" + StartServiceListenerCore.INPUT
-					+ StartServiceListenerCore.CLUSTER;
+					+ StartServiceListenerCore.CLUSTER+ StartServiceListenerCore.INSTALL_NAME ;
 			String path_load_form_script_full = path_load_form_script.replaceFirst("..", path_root);
 			return path_load_form_script_full;
 

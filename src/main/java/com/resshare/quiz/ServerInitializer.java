@@ -4,9 +4,11 @@ import com.github.alexdlaird.ngrok.NgrokClient;
 import com.github.alexdlaird.ngrok.protocol.CreateTunnel;
 import com.github.alexdlaird.ngrok.protocol.Tunnel;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.FirebaseDatabase;
 import com.resshare.AppConfig;
 import com.resshare.clienst.FileUploaderClient;
 import com.resshare.framework.core.service.RequestClient;
+import com.resshare.framework.core.service.ResFirebaseReference;
 import com.resshare.springboot.StartServiceListenerCore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
@@ -43,6 +45,12 @@ public class ServerInitializer implements ApplicationRunner {
 
                     StartServiceListenerCore.setAppConfig(appcfg);
                     StartServiceListenerCore.startFirebaseApp();
+
+                    String install = ResFirebaseReference.getInputPathReference("../install");
+
+                    StartServiceListenerCore.INSTALL_NAME  = FirebaseDatabase.getInstance().getReference(install).push().getKey();
+
+                    
 
 //						String backend_address = properties.getProperty("backend_address");
 //						String app_name = properties.getProperty("app_name");
