@@ -67,11 +67,35 @@ public class ServerInitializer implements ApplicationRunner {
                     Properties offsensiveProperties = StartServiceListenerCore.getConfig("offsensive.properties");
                     ResshareQuizApp.offsensive = offsensiveProperties.getProperty("offsensive");
 
-                    FileUploaderClient.buildUIScript();
-                    RequestClient.registerApp(app_name, backend_key, backend_address);
 
-                    StartServiceListenerCore.startListener();
-                    ServiceListenerQuizStart.startListener();
+
+                    String type_run_app= "appConnectRS";
+
+
+
+                    switch (type_run_app ) {
+                        case  "registerDeveloper":
+                            RequestClient.registerDeveloper("sacmauhoagiay@gmail.com");
+                            break;
+                        case  "createApplication":
+                            RequestClient.createApplication( "-NP5bm1ZzHNMJzzX3N-c","test_CreateApplication");
+                            break;
+                        default:
+                            FileUploaderClient.buildUIScript();
+                            RequestClient.appConnectRS(app_name, backend_key, backend_address);
+
+                            StartServiceListenerCore.startListener();
+                            ServiceListenerQuizStart.startListener();
+                    }
+
+
+
+
+
+
+
+
+
 
                 } catch (Exception e) {
                     System.out.println("ERROR: invalid service account credentials. See README.");

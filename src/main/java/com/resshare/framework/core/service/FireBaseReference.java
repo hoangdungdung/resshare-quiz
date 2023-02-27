@@ -73,6 +73,8 @@ public class FireBaseReference {
 	public static final String draft_remove_message_dasboard ="../draft_remove_message_dasboard";
  
 	public static final String draft_core_get_main_dashboard_app_recommend = "../draft/core/get_main_dashboard_app_app_recommend";;
+	public static final String register_developer = "../register_developer";
+	public static final String create_application = "../create_application";
 	
 
  

@@ -25,7 +25,7 @@ public class RequestClient {
 		iRequest.input(input);
 	}
 	
-	public  static  void registerApp(String app_name, String backend_key,String backend_address) {
+	public  static  void appConnectRS(String app_name, String backend_key,String backend_address) {
 		
 //		String app_name = snapshot1.child("app_name").getValue(String.class);
 //		String backend_key_input = (String) snapshot1.child("backend_key").getValue(String.class);
@@ -40,6 +40,40 @@ public class RequestClient {
 		sendRequest("resshare_configuration",backend_key,FireBaseReference.draft_backend_address_register_app,objJs);
 		  
 		
+	}
+
+	public  static  void registerDeveloper(String mail_address) {
+
+//		String app_name = snapshot1.child("app_name").getValue(String.class);
+//		String backend_key_input = (String) snapshot1.child("backend_key").getValue(String.class);
+//		String backend_address_input = (String) snapshot1.child("backend_address").getValue(String.class);
+		HashMap objJs=new HashMap<>();
+		objJs.put("mail_address", mail_address);
+
+		objJs.put("application", "resshare_configuration");
+
+
+		sendRequest("resshare_configuration","backend_key",FireBaseReference.register_developer,objJs);
+
+
+	}
+
+
+	public  static  void createApplication(String register_developer_key,String name) {
+
+//		String app_name = snapshot1.child("app_name").getValue(String.class);
+//		String backend_key_input = (String) snapshot1.child("backend_key").getValue(String.class);
+//		String backend_address_input = (String) snapshot1.child("backend_address").getValue(String.class);
+		HashMap objJs=new HashMap<>();
+		objJs.put("register_developer_key", register_developer_key);
+		objJs.put("name", name);
+
+		objJs.put("application", "resshare_configuration");
+
+
+		sendRequest("resshare_configuration","backend_key",FireBaseReference.create_application,objJs);
+
+
 	}
 
 }
