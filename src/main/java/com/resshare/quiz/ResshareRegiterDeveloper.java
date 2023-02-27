@@ -11,7 +11,7 @@ import org.springframework.context.ApplicationContext;
 public class ResshareRegiterDeveloper {
 
 	public static void main(String[] args) {
-		RequestClient.RegisterDeveloper("hoangdung1008@gmail.com");
+		RequestClient.registerDeveloper("hoangdung1008@gmail.com");
 
 	}
 
