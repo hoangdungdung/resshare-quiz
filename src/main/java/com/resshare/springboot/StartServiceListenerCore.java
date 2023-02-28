@@ -243,22 +243,8 @@ public class StartServiceListenerCore {
 			return prop;
 		prop = getConfig("config.properties");
 		// get the property value and print it out
-		DATABASE_URL = prop.getProperty("database");
-		GATEWAY_URI = prop.getProperty("gateway_uri");
-		http = prop.getProperty("http");
-		x_api_key = prop.getProperty("x_api_key");
 
-		gateway_type = prop.getProperty("gateway_type");
-
-		APPLICATION_NAME = prop.getProperty("app_name");
-		UPLOAD_FILE_URI = prop.getProperty("upload_file_uri");
-		ENV = prop.getProperty("ent");
-		CLUSTER = prop.getProperty("cluster");
-		USER_ID = prop.getProperty("user_id");
-		KEY = prop.getProperty("key");
-		String sDEBUG = prop.getProperty("debug");
-		if (sDEBUG != null)
-			DEBUG = Boolean.valueOf(sDEBUG);
+		setContext(prop);
 
 		if ((FirebaseApp.getApps() == null) || (FirebaseApp.getApps().size() == 0))
 			try {
@@ -277,6 +263,25 @@ public class StartServiceListenerCore {
 				e.printStackTrace();
 			}
 		return prop;
+	}
+
+	public static   void setContext(Properties prop) {
+		DATABASE_URL = prop.getProperty("database");
+		GATEWAY_URI = prop.getProperty("gateway_uri");
+		http = prop.getProperty("http");
+		x_api_key = prop.getProperty("x_api_key");
+
+		gateway_type = prop.getProperty("gateway_type");
+
+		APPLICATION_NAME = prop.getProperty("app_name");
+		UPLOAD_FILE_URI = prop.getProperty("upload_file_uri");
+		ENV = prop.getProperty("ent");
+		CLUSTER = prop.getProperty("cluster");
+		USER_ID = prop.getProperty("user_id");
+		KEY = prop.getProperty("key");
+		String sDEBUG = prop.getProperty("debug");
+		if (sDEBUG != null)
+			DEBUG = Boolean.valueOf(sDEBUG);
 	}
 
 	public static int getPort() {

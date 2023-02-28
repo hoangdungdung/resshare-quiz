@@ -46,7 +46,7 @@ public class SampleInvocationHandler implements InvocationHandler {
 				System.out.println("annoModulde: " + annoModulde.value());
 				System.out.println("methodName: " + methodName);
 
-				REST_SERVICE_URI = REST_SERVICE_URI + annoModulde.value() + "/" + methodName + "/";
+				REST_SERVICE_URI = REST_SERVICE_URI +"/"+ annoModulde.value() + "/" + methodName + "/";
 				result = restTemplate.postForObject(REST_SERVICE_URI, requestJson, TypeClass);
 			}
 			return result;

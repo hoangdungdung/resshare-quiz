@@ -2,21 +2,19 @@ package com.resshare.quiz;
 
 import com.resshare.framework.core.service.RequestClient;
 import com.resshare.springboot.StartServiceListenerCore;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
 
 import java.util.Properties;
 
 @SpringBootApplication(scanBasePackages = { "com.resshare" }) // same as @Configuration
 																// @EnableAutoConfiguration @ComponentScan
 																// combined
-public class ResshareRegiterDeveloper {
+public class ResshareCreateApplication {
 
 	public static void main(String[] args) {
 		Properties pro = StartServiceListenerCore.getConfig("config.properties");
 		StartServiceListenerCore.setContext(pro);
-		RequestClient.registerDeveloper("hoangdung1008@gmail.com");
+		RequestClient.createApplication( "-NP5bm1ZzHNMJzzX3N-c","test_CreateApplication");
 
 	}
 
