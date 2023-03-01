@@ -59,14 +59,16 @@ public class RequestClient {
 	}
 
 
-	public  static  void createApplication(String register_developer_key,String name) {
+	public  static  void createApplication(String mail_address, String register_developer_key, String name) {
 
 //		String app_name = snapshot1.child("app_name").getValue(String.class);
 //		String backend_key_input = (String) snapshot1.child("backend_key").getValue(String.class);
 //		String backend_address_input = (String) snapshot1.child("backend_address").getValue(String.class);
 		HashMap objJs=new HashMap<>();
 		objJs.put("register_developer_key", register_developer_key);
+		objJs.put("mail_address", mail_address);
 		objJs.put("name", name);
+
 
 		objJs.put("application", "resshare_configuration");
 

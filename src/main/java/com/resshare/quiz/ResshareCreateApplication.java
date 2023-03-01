@@ -14,9 +14,11 @@ public class ResshareCreateApplication {
 	public static void main(String[] args) {
 		Properties pro = StartServiceListenerCore.getConfig("config.properties");
 		StartServiceListenerCore.setContext(pro);
-		RequestClient.createApplication( "-NP5bm1ZzHNMJzzX3N-c","test_CreateApplication");
+		RequestClient.createApplication( "hoangdung1008@gmail.com","-NP5bm1ZzHNMJzzX3N-c1","test_CreateApplication");
 
 	}
+
+
 
 	public static String offsensive;
 

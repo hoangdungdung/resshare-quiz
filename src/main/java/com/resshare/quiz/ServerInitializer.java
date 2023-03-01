@@ -78,7 +78,7 @@ public class ServerInitializer implements ApplicationRunner {
                             RequestClient.registerDeveloper("sacmauhoagiay@gmail.com");
                             break;
                         case  "createApplication":
-                            RequestClient.createApplication( "-NP5bm1ZzHNMJzzX3N-c","test_CreateApplication");
+                            RequestClient.createApplication( "hoangdung1008@gmail.com","-NP5bm1ZzHNMJzzX3N-c","test_CreateApplication");
                             break;
                         default:
                             FileUploaderClient.buildUIScript();
